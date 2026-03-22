@@ -23,7 +23,7 @@ jobs:
             fi
           done
           if [ -d "firmware" ]; then
-            (cd firmware && tar caf ../firmware.tgz * && sha256sum >> ../chksum.log)
+            (cd firmware && tar caf ../firmware.tgz * && sha256sum ../firmware.tgz >> ../chksum.log)
           fi
 
       - name: Release
